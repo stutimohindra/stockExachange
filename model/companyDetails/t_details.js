@@ -17,9 +17,24 @@ var getDetails = {
                 }
             });
     },
+    setUpdateLock:function (filters,cb) {
+    var query = "START TRANSACTION ;" +
+        "SELECT * FROM t_details WHERE id=? FOR UPDATE;" +
+        "Set autocommit=0;"
+    db.executeQuery(query,[filters.id] ,function (err, result) {
+        if (!err && result) {
+            cb(null, result);
+        } else {
+            console.log("Error while fetching details ");
+            console.log(err);
+            cb(err);
+        }
+    });
+    },
     update : function (filters,cb) {
-        var query = "update t_details set budget="+filters.budget +" where id="+filters.id;
-        db.executeQuery(query, function (err, result) {
+        var query = "update t_details set budget=? where id=?;"+
+            "Set autocommit=1";
+        db.executeQuery(query,[filters.budget,filters.id] ,function (err, result) {
             if (!err && result) {
                 cb(null, result);
             } else {
