@@ -11,18 +11,17 @@ const dbConfig = {
         database: 'companyDetails'
     },
     "production": {
-        // host: '42.156.33.86',
-        // host: '127.0.0.1',
-        // port: '3306',
-        // user: 'root',
-        // password: 'wgCCDh4p',
-        // database: 'companyDetails'
+        host: 'zpj83vpaccjer3ah.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',
+        port: '3306',
+        user: 'toxfbo310requ5zx',
+        password: 'nwja3689ax6yvavm',
+        database: 'lh09ujuuf7ehcrba'
     }
 }
 
 const hostConfig={
     "development": 'http://localhost:3000',
-    "production": ''
+    "production": 'https://assignmentstockexch.herokuapp.com'
 }
 
 var config = {
