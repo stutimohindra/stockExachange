@@ -1,4 +1,4 @@
-
+'use strict'
 var details = require('../model/companyDetails/t_details')
 var common = require('./common')
 var async = require('async')

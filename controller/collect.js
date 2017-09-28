@@ -1,4 +1,4 @@
-
+'use strict'
 var collect = {
     collectRequestData: function collectRequestData(req, res, next) {
 

@@ -1,3 +1,4 @@
+'use strict'
 var common = {
     returnInt :function (value) {
         if(value.indexOf('$') > 0 ){
@@ -22,7 +23,7 @@ var common = {
 
         }else if(budget.indexOf('cent') >0 ){
             var indexOfCents = budget.indexOf('cent');
-            var newBudget = budget.substr(0,indexOfDollar) - bid;
+            var newBudget = budget.substr(0,indexOfCents) - bid;
             if(newBudget < 0){
                 return -1;
             }else {
