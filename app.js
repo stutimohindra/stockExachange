@@ -16,7 +16,9 @@ var dataBaseScreenShot = require('./controller/databaseScreenshot')
 
 app.get('/',collect.collectRequestData,validateParams.validateRequestData,matchTarget.matchBaseTargeting,
     matchTarget.budgetCheck,matchTarget.baseBidCheck,matchTarget.shortListing,matchTarget.updateBudget);
-app.get('/dataBaseScreenshot',dataBaseScreenShot.getUpdates);
+app.get('/dataBaseScreenshotUpdates',dataBaseScreenShot.getUpdates);
+app.get('/dataBaseScreenshot',dataBaseScreenShot.getData);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

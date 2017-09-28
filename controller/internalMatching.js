@@ -48,7 +48,7 @@ var baseTargeting = {
         var requestDetails = req.budgetCheckResponse
         console.log("BaseBid:")
         var matchedbaseBidResponse = requestDetails.filter(function (object) {
-            if ( parseInt(common.returnInt(object.bid)) <  parseInt(req.query.baseBid)) {
+            if ( parseInt(common.returnInt(object.bid)) <  parseInt(common.convertToCents(req.query.baseBid))) {
                 console.log('{'+object.companyId,',Passed'+'}')
                 return object;
             }else {

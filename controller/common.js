@@ -1,5 +1,14 @@
 'use strict'
 var common = {
+    convertToCents : function (value) {
+        if(value.indexOf('$') > 0 ) {
+            var indexOfDollar = value.indexOf('$');
+            return (value.substr(0, indexOfDollar) * 100)
+        }else if(value.indexOf('cent') > 0 ){
+            var indexOfCents = value.indexOf('cent');
+            return ((value.substr(0,indexOfCents)));
+        }
+    },
     returnInt :function (value) {
         if(value.indexOf('$') > 0 ){
             var indexOfDollar = value.indexOf('$');
