@@ -4,12 +4,11 @@ var mysql = require('mysql');
 
 var getDetails = {
 
-    fetch : function (filters, cb) {
+    fetch : function (cb) {
         var query = "select * from t_details";
             db.executeQuery(query, function (err, result) {
                 if (!err && result) {
                     cb(null, result);
-
                 } else {
                     console.log("Error while fetching details ");
                     console.log(err);
