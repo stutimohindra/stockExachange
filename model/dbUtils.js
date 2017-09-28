@@ -1,6 +1,6 @@
 'use strict';
 var mysql = require('mysql');
-var configDetails = require('../config').dbConfig
+var configDetails = require('../config')
 var dbutil = {
     executeQuery: function queryExecution(customQuery,params,cb) {
         this.getConnection(function (err, connection) {
@@ -23,11 +23,11 @@ var dbutil = {
     getConnection: function connect(cb) {
 
         var connection = mysql.createConnection({
-            host: configDetails.host,
-            port: configDetails.port,
-            user: configDetails.user,
-            password: configDetails.password,
-            database: configDetails.database,
+            host: configDetails.db[0].host,
+            port: configDetails.db[0].port,
+            user: configDetails.db[0].user,
+            password: configDetails.db[0].password,
+            database: configDetails.db[0].database,
             multipleStatements: true
         });
         connection.connect(function (err) {
