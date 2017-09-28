@@ -78,6 +78,12 @@ var baseTargeting = {
     updateBudget: function (req,res,next) {
         var requestDetails = req.winnerDetails[0]
         var newBudget = common.newBudget(requestDetails.budget, req.query.baseBid);
+        if(newBudget == -1){
+            res.status(500).json({
+                error: 0,
+                message: "insufficient budget"
+            })
+        }
         var opt = {
             id: requestDetails.id,
             budget : newBudget
@@ -93,7 +99,7 @@ var baseTargeting = {
                 })
            },
             function releaseUpdate(result,cb) {
-                details.update(opt,function (error,response) {
+                details.updateBudget(opt,function (error,response) {
                     if(error){
                         res.send(new Error('Error occurred while updating budget for companyId'+requestDetails.id));
                     }else if(!error && response){

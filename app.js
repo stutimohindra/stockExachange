@@ -11,10 +11,11 @@ var app = express();
 var collect = require('./controller/collect');
 var validateParams = require('./controller/validate');
 var matchTarget = require('./controller/internalMatching');
+var dataBaseScreenShot = require('./controller/databaseScreenshot')
 
 app.get('/',collect.collectRequestData,validateParams.validateRequestData,matchTarget.matchBaseTargeting,
     matchTarget.budgetCheck,matchTarget.baseBidCheck,matchTarget.shortListing,matchTarget.updateBudget);
-
+app.get('/dataBaseScreenshot',dataBaseScreenShot.getUpdates);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
