@@ -8,10 +8,8 @@ This is an assigment for Adcash to sell stocks to other bidders
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+ install node
+ async library
+ mysql library
+ to run : nodemon server.js
 
