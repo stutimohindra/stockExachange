@@ -1,0 +1,22 @@
+# User-specific stuff:
+.idea/workspace.xml
+
+# dependencies
+node_modules
+
+
+public/images
+public/_images
+
+# testing
+coverage
+
+# production
+build
+
+# misc
+.DS_Store
+.env
+npm-debug.log
+log/*
+
