@@ -4,7 +4,7 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-This is an assigment for Adcash to sell stocks to other bidders
+This is an assigment for company to sell stocks to other bidders
 
 ### How do I get set up? ###
 
