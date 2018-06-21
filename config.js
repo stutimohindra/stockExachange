@@ -11,11 +11,11 @@ const dbConfig = {
         database: 'companyDetails'
     },
     "production": {
-        host: 'zpj83vpaccjer3ah.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',
+        host: '',
         port: '3306',
-        user: 'toxfbo310requ5zx',
-        password: 'nwja3689ax6yvavm',
-        database: 'lh09ujuuf7ehcrba'
+        user: '',
+        password: '',
+        database: ''
     }
 }
 
